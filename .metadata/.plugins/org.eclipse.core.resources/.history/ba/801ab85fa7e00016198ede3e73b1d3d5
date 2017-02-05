@@ -1,0 +1,43 @@
+import java.util.Random;
+
+public class Forest {
+  private static int size;
+
+  public static void setSize(int x) {
+    size = x;
+  }
+
+  public static void printForest(int[][] f) {
+    for (int i = 0; i < f.length; i++) {
+      System.out.println();
+      for (int j = 0; j < f[i].length; j++) {
+        System.out.print(f[i][j]);
+      }
+    }
+  }
+
+  public static int[][] createForest(int[][] f) {
+    Random r = new Random();
+    for (int i = 0; i < f.length; i++) {
+      for (int j = 0; j < f[i].length; j++) {
+        f[i][j] = r.nextInt(2);
+      }
+    }
+    return f;
+  }
+
+  public static int[][] shootLightning(int[][] f) {
+    return f;
+  }
+
+  public static void main(String[] args) {
+    if (args.length == 1)
+      setSize(Integer.parseInt(args[0]));
+    else
+      setSize(5);
+    int[][] forest = new int[size][size];
+    forest = createForest(forest);
+    printForest(forest);
+    shootLightning(forest);
+  }
+}

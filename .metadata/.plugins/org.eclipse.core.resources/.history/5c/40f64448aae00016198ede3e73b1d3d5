@@ -1,0 +1,11 @@
+
+public class Lightning {
+  static int x;
+  static int y;
+  
+  public Lightning(int i, int j) {
+    x=i;
+    y=j;
+  }
+
+}

@@ -1,0 +1,9 @@
+
+public class Forest {
+	
+	private static int size;
+	
+	public static void main(String[] args){
+		if(args.length==1) setSize(Integer.parseInt(args[0]));
+	}
+}
